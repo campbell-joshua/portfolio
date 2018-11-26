@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Josh Campbell</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body bgcolor="#ccffee">
+    <header>
+        <div id="nav">
+            <div id="mySidepanel" class="sidepanel">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                <a href="index.html">Home</a>
+                <a><button class="openbtnsub" onclick="openNav1()">Projects</button></a>
+                <a href="resume/index.html">Resume</a>
+                <a href="contact/index.html">Contact</a>
+            </div>
+
+            <div id="projectstab" class="sidepanel">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav1()">×</a>
+                <a href="projects/index.html">Projects Home</a>
+                <a href="projects/arcade/index.html">Retro-Pi Arcade</a>
+                <a href="projects/smartblender/index.html">Smart Blender</a>
+                <a href="projects/ramshack/index.html">RamShack Website</a>
+                <a href="projects/adpersense/index.html">AdPerSense</a>
+                <a href="projects/sophos/index.html">Sophos Engineer Certification</a>
+            </div>
+
+            <button class="openbtn" onclick="openNav()"><strong>☰</strong></button>
+        </div>
+        <h1 id="title"><strong>Josh Campbell</strong></h1>
+    </header>
+
+    <div class="grid-container-1">
+        <div class="grid-item item1">
+            <img id="profilepic" src="images/profilepic.jpg" alt="Profile Picture">
+            <p class="indented">
+                My name is Josh Campbell.  I am a Junior Experience Architecture major with minors in Computer Science
+                Engineering and Graphic design at Michigan State University.
+                My main interests lie in front end app and web development, focusing on the user interfaces.
+                <br><br><span class="tab">
+                Having</span> a minor in Computer Science Engineering gives me a better perspective of the technical
+                aspects of developing apps and websites.  I originally had planned on getting my degree in Computer Science,
+                but found that the focus on back-end development was far from what I wanted to do.
+                <br><br>
+            </p>
+            <img id="msulogo" src="images/msulogo.png" alt="MSU Logo">
+            <p class="indented">
+                I decided to also get a minor in Graphic Design so that I have a better ability to design interfaces
+                that are appealing to users.  Graphic Design is one area that I have had the least amount of experience with
+                and earning a minor in it will be very beneficial to my future career.
+                <br><br><span class="tab">
+                I</span> have had two internships with Delphi which has been rebranded to Aptiv.  My first internship
+                was what got me interested in front end development.  While working for Delphi, I developed an application
+                using Java for the Android Auto operating system.  I was responsible for designing the layout and functionality
+                of the buttons and menus, as well as the color scheme.  This was my first time working with developing from
+                an IDE, not a template like wordpress.
+                <br><br><span class="tab">
+                Long</span> term I would like to either stay in the midwest area or relocate to Arizona or California.
+                I see myself working for a design firm or in house design team for the first several years of my career,
+                but would like to be in a management position or owning my own company once I have gained more experience.
+
+            </p>
+
+        </div>
+
+        <div class="grid-item item3"><a href="projects/arcade/index.html">
+            <img id="featuredproject" src="images/arcade01.jpg" alt="Arcade">Featured Project</a></div>
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidepanel").style.width = "175px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidepanel").style.width = "0";
+        }
+
+        function openNav1() {
+            document.getElementById("projectstab").style.width = "275px";
+            document.getElementById("projectstab").style.height = "315px"
+        }
+
+        function closeNav1() {
+            document.getElementById("projectstab").style.width = "0";
+        }
+
+        // When the user scrolls the page, execute stickyNav
+        window.onscroll = function() {stickyNav()};
+
+        // Get the navbar
+        var navbar = document.getElementById("nav");
+
+        // Get the offset position of the navbar
+        var sticky = navbar.offsetTop;
+
+        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function stickyNav() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+</body>
+</html>

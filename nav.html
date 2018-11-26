@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Navigation</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+    <header>
+        <div id="nav">
+            <div id="mySidepanel" class="sidepanel">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                <a href="index.html">Home</a>
+                <a><button class="openbtnsub" onclick="openNav1()">Projects</button></a>
+                <a href="resume/index.html">Resume</a>
+                <a href="contact/index.html">Contact</a>
+            </div>
+
+            <div id="projectstab" class="sidepanel">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav1()">×</a>
+                <a href="projects/arcade/index.html">Retro-Pi Arcade</a>
+                <a href="projects/smartblender/index.html">Smart Blender</a>
+                <a href="projects/ramshack/index.html">RamShack Website</a>
+                <a href="projects/adpersense/index.html">AdPerSense</a>
+                <a href="projects/sophos/index.html">Sophos Engineer Certification</a>
+            </div>
+
+            <button class="openbtn" onclick="openNav()"><strong>☰</strong></button>
+        </div>
+    </header>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidepanel").style.width = "175px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidepanel").style.width = "0";
+        }
+
+        function openNav1() {
+            document.getElementById("projectstab").style.width = "275px";
+            document.getElementById("projectstab").style.height = "265px"
+        }
+
+        function closeNav1() {
+            document.getElementById("projectstab").style.width = "0";
+        }
+
+        // When the user scrolls the page, execute stickyNav
+        window.onscroll = function() {stickyNav()};
+
+        // Get the navbar
+        var navbar = document.getElementById("nav");
+
+        // Get the offset position of the navbar
+        var sticky = navbar.offsetTop;
+
+        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function stickyNav() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+</body>
+</html>

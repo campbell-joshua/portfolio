@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Retro-Pi Arcade</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+
+</head>
+<body bgcolor="#ccffee">
+<header>
+    <div id="nav">
+        <div id="mySidepanel" class="sidepanel">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="../../index.html">Home</a>
+            <a><button class="openbtnsub" onclick="openNav1()">Projects</button></a>
+            <a href="../../resume/index.html">Resume</a>
+            <a href="../../contact/index.html">Contact</a>
+        </div>
+
+        <div id="projectstab" class="sidepanel">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav1()">×</a>
+            <a href="../index.html">Projects Home</a>
+            <a href="../arcade/index.html">Retro-Pi Arcade</a>
+            <a href="../smartblender/index.html">Smart Blender</a>
+            <a href="../ramshack/index.html">RamShack Website</a>
+            <a href="../adpersense/index.html">AdPerSense</a>
+            <a href="../sophos/index.html">Sophos Engineer Certification</a>
+        </div>
+
+        <button class="openbtn" onclick="openNav()"><strong>☰</strong></button>
+    </div>
+    <h1 id="title"><strong>Retro-Pi Arcade</strong></h1>
+</header>
+
+<div class="grid-container-2">
+    <div>
+        <img id="arcade03" src="../../images/arcade03.jpg" alt="Arcade">
+        <p class="indented">
+            When I was 18, I built a Retro-Pi Arcade with my grandpa.  He did most of the physical and left the wiring and
+            programming to me.  The arcade is designed to run emulators of any game developed before 1996.  The library of
+            games is in the hunderds, and features classics such as Pac-Man, Super Mario Bros, Sonic, Donkey Kong, and many more.
+            <br><br><span class="tab">
+            Most</span> of the plans were pulled from a DIY website, with minor adjustments made for the specific hardware we used.
+            I learned a great deal about hardware and wiring from this experience.
+        </p>
+        <img id="arcade02" src="../../images/arcade02.jpg" alt="Arcade">
+        <p class="indented">
+            The design of the exterior was taken after Michigan State and my Fraternity, Triangle.  The material used for
+            the cabinet was particle board.  Looking back I would choose a different kind of material because particle board
+            is very heavy and chips very easily.  The internal parts are composed of a set of buttons and joy sticks connected to
+            Raspberry Pi.  There is also a LED light strip in the top, backlighting the Michigan State logo. The speakers are
+            also located in the top compartment.
+            <br><br><span class="tab">
+            Another</span> feature of the arcade is the ability to plug in a controller to the front of the cabinet.  This
+            allows me to play games with a PS3 controller that I keep inside the arcade.  This is especially nice for
+            playing games for a long period of time.  This also allows me to play games with controllers that are more similar
+            to the original controllers the games were developed for.
+            <br><br><span class="tab">
+            This</span> project took about 4 weeks from start to finish and cost around $300 to build.  Overall it gave me
+            a much better understanding of the Linux operating system and how to manipulate a Raspberry Pi.
+        </p>
+    </div>
+</div>
+
+<script>
+    function openNav() {
+        document.getElementById("mySidepanel").style.width = "175px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidepanel").style.width = "0";
+    }
+
+    function openNav1() {
+        document.getElementById("projectstab").style.width = "275px";
+        document.getElementById("projectstab").style.height = "315px";
+    }
+
+    function closeNav1() {
+        document.getElementById("projectstab").style.width = "0";
+    }
+
+    // When the user scrolls the page, execute stickyNav
+    window.onscroll = function() {stickyNav()};
+
+    // Get the navbar
+    var navbar = document.getElementById("nav");
+
+    // Get the offset position of the navbar
+    var sticky = navbar.offsetTop;
+
+    // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    function stickyNav() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    }
+</script>
+</body>
+</html>

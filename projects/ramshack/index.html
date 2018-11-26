@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ram Shack Website</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+
+</head>
+<body bgcolor="#ccffee">
+<header>
+    <div id="nav">
+        <div id="mySidepanel" class="sidepanel">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="../../index.html">Home</a>
+            <a><button class="openbtnsub" onclick="openNav1()">Projects</button></a>
+            <a href="../../resume/index.html">Resume</a>
+            <a href="../../contact/index.html">Contact</a>
+        </div>
+
+        <div id="projectstab" class="sidepanel">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav1()">×</a>
+            <a href="../index.html">Projects Home</a>
+            <a href="../arcade/index.html">Retro-Pi Arcade</a>
+            <a href="../smartblender/index.html">Smart Blender</a>
+            <a href="../ramshack/index.html">RamShack Website</a>
+            <a href="../adpersense/index.html">AdPerSense</a>
+            <a href="../sophos/index.html">Sophos Engineer Certification</a>
+        </div>
+
+        <button class="openbtn" onclick="openNav()"><strong>☰</strong></button>
+    </div>
+    <h1 id="title"><strong>Rockford Ramshack Clothing Website</strong></h1>
+</header>
+
+<div class="grid-container-2">
+    <div>
+        <a href="http://www.rockfordramshack.com" target="_blank">
+    <img id="ramshackimg" src="../../images/ramshacklogo.png" alt="Ram Shack Logo" >
+        </a>
+    <p class="indented">The Rockford Ram Shack website was my first experience with
+    front end development.  Beginning the project, I was a 16 year old Junior in
+    high school, with nearly zero experience.  The Ram Shack website was designed to be a simple
+    clothing store website for my high school's spirit wear.  The website that had been in place before
+    I took over was very difficult to use.  Links were often broken, text was difficult to
+    read, and the website just looked all around ugly.  I decided, rather than try to fix
+    the train wreck, that I should just start from scratch.<br>
+    <br>
+        <span class="tab">
+            Because</span> the majority of people working on the site after me would be other students,
+    I decided to use WordPress.  This allowed any student after me to easily edit
+    the website, rather than have a bunch of different teenage students try to learn HTML,
+    CSS, and JavaScript.<br><br>
+        <span class="tab">Before</span>
+     beginning development, I started looking at other clothing store websites to gain
+    inspiration.  A common theme I noticed across them was the use of the background.  They
+    either opt for a white background or a soft color as to not distract the users eyes from
+    the content.  I started to recognize patterns in menu structures and the general layout
+    of the products.<br><br>
+        <span class="tab">
+            Once</span> I had figured out the main website layout and imported all of the updated content, I
+    started work on implementing PayPal, allowing for online orders.  Fortunately, WordPress had
+    a plugin for PayPal, I just had to implement it.  This proved to be more difficult than I had
+    expected because the documentation for how to make "Pay with PayPal" buttons was not very clear
+    and I was very inexperienced.  I gradually figured out how to include all of the necessary things
+    such as payment, collecting shipping address, collecting contact information, and making sure the
+    owner of the store was notified properly when a purchase was made.<br><br>
+        <span class="tab">
+            My</span> final challenge with the Ram Shack website was to understand GoDaddy and FTP.  While this was one
+    of the most challenging parts, it gave me my first experience working with a server.  The website went live
+    in the Spring of 2015 and I maintained it through the Spring of 2016, when I graduated.<br><br>
+    <span class="tab">
+        While</span> not everything on the website is my original design, much of the site reflects my original vision and
+    design.  You can access the website by either clicking on the logo above or by following this link:
+        <a href="http://www.rockfordramshack.com" target="_blank">Rockford Ramshack</a></p>
+    </div>
+</div>
+
+<script>
+    function openNav() {
+        document.getElementById("mySidepanel").style.width = "175px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidepanel").style.width = "0";
+    }
+
+    function openNav1() {
+        document.getElementById("projectstab").style.width = "275px";
+        document.getElementById("projectstab").style.height = "315px";
+    }
+
+    function closeNav1() {
+        document.getElementById("projectstab").style.width = "0";
+    }
+
+    // When the user scrolls the page, execute stickyNav
+    window.onscroll = function() {stickyNav()};
+
+    // Get the navbar
+    var navbar = document.getElementById("nav");
+
+    // Get the offset position of the navbar
+    var sticky = navbar.offsetTop;
+
+    // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    function stickyNav() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    }
+</script>
+</body>
+</html>
