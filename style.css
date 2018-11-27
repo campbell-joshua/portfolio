@@ -180,6 +180,10 @@ html {
     display:inline-block;
 }
 
+.copyright{
+    text-align: center;
+}
+
  #title{
      padding-left:60px;
  }
@@ -242,6 +246,7 @@ html {
 
 #sophoslogo{
     width: 100%;
+    padding-top: 25%;
 }
 
 #featuredproject{
@@ -276,4 +281,21 @@ html {
 #msulogo{
     float:right;
     width:25%;
+}
+
+#contactcopyright{
+    position:relative;
+    top: -125px;
+}
+
+#adpersenselogo {
+    float: right;
+    padding-right: 10px;
+    padding-top: 10px;
+    width: 15%;
+}
+
+#adpersenselogomenu{
+    width: 100%;
+    padding-top: 25%;
 }
